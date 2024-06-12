@@ -2,6 +2,54 @@
   text-align: center;
 }
 
+/* ** Default Colors */
+/* TODO what are the colors for the */
+Body {
+  --primary: #0066fe; 
+  --secondary: #f36d66;
+  --black: #0c1848;
+  --light: #f5fafb;
+  --medium: #0c18487a;
+  --light-blue: #0066fe17;
+  --red: #f36d66;
+}
+.safe-area {
+  display: flex;
+  padding: 2.75rem 0.75rem 0.75rem 0.75rem;
+  flex-direction: column;
+}
+
+/* ! Development ONLY to test Grids */
+/* 
+body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

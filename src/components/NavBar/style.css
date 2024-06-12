@@ -1,0 +1,19 @@
+.navBar {
+
+  background: white;
+}
+.navBar .brand {
+  font-weight: 900;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.navBar .download {
+  /* display: flex; */
+  /* justify-content: center; */
+  border: 1px dashed var(--primary);
+  border-radius: 24px;
+  color: var(--primary);
+  padding: 8px 16px;
+  text-decoration: none;
+}
