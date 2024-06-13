@@ -1,19 +1,25 @@
 .navBar {
-
   background: white;
 }
+
 .navBar .brand {
   font-weight: 900;
   color: var(--primary);
   text-decoration: none;
 }
 
-.navBar .download {
-  /* display: flex; */
-  /* justify-content: center; */
+.navBar .mysls {
   border: 1px dashed var(--primary);
   border-radius: 24px;
   color: var(--primary);
   padding: 8px 16px;
   text-decoration: none;
+}
+
+.navBar .navbar-nav .nav-link {
+  /* color: var(--primary); */
+}
+
+.navBar .navbar-nav .nav-link:hover {
+  /* color: var(--primary-dark); */
 }
