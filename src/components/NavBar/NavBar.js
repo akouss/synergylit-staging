@@ -11,14 +11,15 @@ import logo from "../../assets/Logo.png";
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect className="navBar" expand="md" fixed="top">
+    <Navbar
+      collapseOnSelect
+      className="navBar"
+      expand="md"
+      fixed="top"
+      sticky="top"
+    >
       <Navbar.Brand href="#home" className="brand">
-        <img
-          src={logo}
-          width="300"
-          className="d-inline-block align-top"
-          alt="Synergy Litigation Services logo"
-        />
+        <img src={logo} alt="Synergy Litigation Services logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbar-content" />
       <Navbar.Collapse id="navbar-content">

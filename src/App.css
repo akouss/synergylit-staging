@@ -4,7 +4,7 @@
 
 /* ** Default Colors */
 /* TODO what are the colors for the */
-Body {
+/* Body {
   --primary: #0066fe; 
   --secondary: #f36d66;
   --black: #0c1848;
@@ -12,7 +12,7 @@ Body {
   --medium: #0c18487a;
   --light-blue: #0066fe17;
   --red: #f36d66;
-}
+} */
 .safe-area {
   display: flex;
   padding: 2.75rem 0.75rem 0.75rem 0.75rem;
