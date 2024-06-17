@@ -1,0 +1,33 @@
+.footer {
+  padding-top: 4rem;
+  max-width: 100% !important;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.footer .brand {
+  display: flex;
+  /* font-weight: 900; */
+  color: var(--primary);
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+.footer .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0.75rem 1rem;
+}
+.footer .social {
+  padding: 0 0.75rem;
+}
+.footer .text {
+  text-align: left;
+  font-size: calc(10px + 0.5vmin);
+  color: #707070;
+  margin: 0;
+}

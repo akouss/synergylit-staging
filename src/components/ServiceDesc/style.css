@@ -1,0 +1,29 @@
+.services {
+    background: white;
+    margin-bottom: 5rem;
+
+  }
+  
+  .services .title {
+    /* font-weight: 900; */
+    color: var(--dark);
+    margin-bottom: 2.5rem;
+  }
+  .services .item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 2rem;
+   color: var(--medium);
+  }
+  
+  .services .item .icon {
+    font-size: 2rem; 
+    margin-right: 1rem; 
+    color: var(--primary);
+  }
+  .services .item .desc {
+    text-align: left;
+  }
+
+  
+  

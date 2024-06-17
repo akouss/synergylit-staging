@@ -11,7 +11,7 @@ function CustomAccordion() {
     <Accordion defaultActiveKey="0">
       {services.map((item, index) => (
         <Accordion.Item eventKey={item.id} key={item.id}>
-          <Accordion.Header>{item.title}</Accordion.Header>
+          <Accordion.Header>{item.title.toUpperCase()}</Accordion.Header>
           <Accordion.Body>{item.description}</Accordion.Body>
         </Accordion.Item>
       ))}
