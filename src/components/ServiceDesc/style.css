@@ -4,8 +4,8 @@
 }
 
 .services .title {
-  color: var(--secondary);
-  background-color: rgb(var(--primary-rgb) / 8%);
+  color: var(--bs-secondary);
+  background-color: rgba(var(--bs-primary-rgb), 0.05);
   margin-bottom: 2.5rem;
   padding: 0.75rem;
   border-radius: 10px;
@@ -14,13 +14,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  color: var(--medium);
+  color: var(--bs-gray-600);
 }
 
 .services .item .icon {
   font-size: 2rem;
   margin-right: 1rem;
-  color: var(--primary);
+  color: var(--bs-primary);
 }
 .services .item .desc {
   text-align: left;

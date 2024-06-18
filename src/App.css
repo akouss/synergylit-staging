@@ -1,4 +1,6 @@
-.App h1, h2, a{
+.App h1,
+h2,
+a {
   text-align: center;
 }
 
@@ -6,19 +8,6 @@
   display: flex;
   padding: 0.75rem 0.75rem 0.75rem 0.75rem;
   flex-direction: column;
-}
-
-/* ** Default Colors */
-Body {
-  --primary: #C1AC76; 
-  --primary-rgb: 193 172 118;
-  --secondary: #8B4C4C;
-  --secondary-rgb: 139 76 76;
-  --black: #0c1848;
-  --light: #f5fafb;
-  --medium: #0c18487a;
-  --light-blue: #0066fe17;
-  --red: #f36d66;
 }
 
 /* ! Development ONLY to test Grids */

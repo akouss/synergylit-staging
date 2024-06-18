@@ -4,7 +4,7 @@ form {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: rgb(var(--secondary-rgb) / 2%);
+  background-color: rgb(var(--bs-secondary-rgb), 0.05);
 }
 
 .form-label {
@@ -20,31 +20,31 @@ button {
 }
 
 .custom-checkbox .form-check-input:checked {
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 .custom-checkbox .form-check-input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 0.2rem rgb(var(--primary-rgb) / 25%);
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
 .custom-checkbox .form-check-label {
-  /* color: var(--primary); */
+  /* color: var(--bs-primary); */
 }
 
 /* Custom styles for form inputs */
 input.form-control,
 .form-control {
-  /* color: var(--primary); */
-  border-color: var(--primary);
-  background-color: transparent;
+  /* color: var(--bs-primary); */
+  border-color: var(--bs-primary);
+  /* background-color: transparent; */
 }
 
 input.form-control:focus,
 .form-control:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 0.2rem rgb(var(--primary-rgb) / 25%);
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
 /* Optional: Style for date input icon */
