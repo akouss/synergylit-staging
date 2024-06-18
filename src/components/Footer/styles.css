@@ -24,6 +24,7 @@
 }
 .footer .social {
   padding: 0 0.75rem;
+  color: var(--primary);
 }
 .footer .text {
   text-align: left;

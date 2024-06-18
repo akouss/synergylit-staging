@@ -5,7 +5,7 @@ import "./styles.css";
 
 //* SVG
 import facebook from "../../assets/facebook.svg";
-import github from "../../assets/github.svg";
+import instagram from "../../assets/instagram.svg";
 import linkedin from "../../assets/linkedin.svg";
 
 function Footer() {
@@ -22,25 +22,28 @@ function Footer() {
         </Col>
         <Col md={4} className="social-container order-1">
           <a
-            href="https://www.facebook.com/hector.valerio"
+            href="https://www.facebook.com"
             target="_blank"
             rel="noreferrer noopener"
+            className="social"
           >
-            <img src={facebook} className="social" alt="facebook" />
+            <img src={facebook} alt="facebook" />
           </a>
           <a
-            href="https://www.linkedin.com/in/hectorvalerio"
+            href="https://www.linkedin.com"
             target="_blank"
             rel="noreferrer noopener"
+            className="social"
           >
-            <img src={linkedin} className="social" alt="linkedin" />
+            <img src={linkedin} alt="linkedin" />
           </a>
           <a
-            href="https://github.com/hvaleri0"
+            href="https://instagram.com/"
             target="_blank"
             rel="noreferrer noopener"
+            className="social"
           >
-            <img src={github} className="social" alt="github" />
+            <img src={instagram} alt="instagram" />
           </a>
         </Col>
       </Row>

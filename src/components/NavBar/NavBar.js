@@ -28,16 +28,16 @@ function NavBar() {
           <Nav.Link href="#services">Services</Nav.Link>
           <Nav.Link href="#schedule">Schedule</Nav.Link>
           <Nav.Link href="#contact">Contact Us</Nav.Link>
+          <Button
+            variant="outline-primary"
+            as="a"
+            href="https://google.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Access MySLS Client Portal
+          </Button>
         </Nav>
-        <Button
-          variant="outline-primary"
-          as="a"
-          href="https://google.com"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Access MySLS Client Portal
-        </Button>
       </Navbar.Collapse>
     </Navbar>
   );

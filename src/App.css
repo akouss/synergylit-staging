@@ -1,4 +1,4 @@
-.App h1, h2{
+.App h1, h2, a{
   text-align: center;
 }
 
@@ -11,7 +11,9 @@
 /* ** Default Colors */
 Body {
   --primary: #C1AC76; 
-  --secondary: #0066fe;
+  --primary-rgb: 193 172 118;
+  --secondary: #8B4C4C;
+  --secondary-rgb: 139 76 76;
   --black: #0c1848;
   --light: #f5fafb;
   --medium: #0c18487a;
