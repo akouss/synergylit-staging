@@ -29,7 +29,7 @@ function NavBar() {
           <Nav.Link href="#schedule">Schedule</Nav.Link>
           <Nav.Link href="#contact">Contact Us</Nav.Link>
           <Button
-            variant="outline-primary"
+            variant="primary"
             as="a"
             href="https://google.com"
             target="_blank"

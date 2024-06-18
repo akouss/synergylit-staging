@@ -9,7 +9,7 @@
   border-radius: 10px;
 }
 .information .subtitle {
-  color: var(--bs-primary);
+  color: var(--bs-secondary);
   padding: 0.5rem;
 }
 .information .anchor-section {

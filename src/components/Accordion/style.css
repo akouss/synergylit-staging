@@ -4,7 +4,7 @@
 }
 
 .accordion-header .accordion-button {
-  color: var(--bs-primary);
+  color: var(--bs-secondary);
   background-color: rgba(var(--bs-secondary-rgb), 0.05);
 }
 
