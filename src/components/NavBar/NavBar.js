@@ -18,7 +18,7 @@ function NavBar() {
       fixed="top"
       sticky="top"
     >
-      <Navbar.Brand href="#home" className="brand">
+      <Navbar.Brand href="#" className="brand">
         <img src={logo} alt="Synergy Litigation Services logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbar-content" />

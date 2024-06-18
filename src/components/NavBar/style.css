@@ -9,7 +9,7 @@
 }
 
 .navBar .brand img {
-  width: 300px; /* Default width */
+  width: 250px; /* Default width */
 }
 
 .navBar .mysls {
@@ -36,19 +36,19 @@
 
 @media (max-width: 992px) {
   .navBar .brand img {
-    width: 200px; /* Adjust for medium screens */
+    width: 225px; /* Adjust for medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .navBar .brand img {
-    width: 150px; /* Adjust for small screens */
+    width: 200px; /* Adjust for small screens */
   }
 }
 
 @media (max-width: 576px) {
   .navBar .brand img {
-    width: 100px; /* Adjust for extra small screens */
+    width: 175px; /* Adjust for extra small screens */
   }
 }
 

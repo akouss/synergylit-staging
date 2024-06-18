@@ -1,25 +1,30 @@
-.contact {
+.information {
     background: white;
     margin-bottom: 5rem;
   }
-  .contact .title {
+  .information .title {
     color: var(--dark);
     margin-bottom: 2.5rem;
   }
-  .contact .item {
+  .information .item {
    display: flex;
    align-items: center;
    margin-bottom: 2rem;
    color: var(--medium);
   }
-  .contact .item .icon {
+  .information .item .icon {
     font-size: 2rem; 
     margin-right: 1rem; 
     color: var(--primary);
   }
-  .contact .item .desc {
+  .information .item .desc {
     text-align: left;
   }
+  .information .anchor-section {
+    position: relative;
+    padding-top: 10rem;
+    margin-top: -10rem;
+}
 
   
   

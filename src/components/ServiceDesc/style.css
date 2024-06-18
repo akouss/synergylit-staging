@@ -24,6 +24,10 @@
   .services .item .desc {
     text-align: left;
   }
-
+  .services .anchor-section {
+    position: relative;
+    padding-top: 10rem;
+    margin-top: -10rem;
+}
   
   

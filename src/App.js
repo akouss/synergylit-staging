@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App safe-area">
+    <div id="home" className="App safe-area">
       <NavBar />
       <Carousel />
       <Services />

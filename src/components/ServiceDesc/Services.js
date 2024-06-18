@@ -9,7 +9,8 @@ import { heading, highlights } from "../../data/services";
 
 function Services() {
   return (
-    <Container id="services" className="services">
+    <Container className="services">
+      <div id="services" className="anchor-section" />
       <Row>
         <h1 className="title">{heading}</h1>
       </Row>

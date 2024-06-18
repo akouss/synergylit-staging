@@ -15,12 +15,7 @@ function ControlledCarousel() {
   };
 
   return (
-    <Carousel
-      className="mb-5"
-      id="home"
-      activeIndex={index}
-      onSelect={handleSelect}
-    >
+    <Carousel className="mb-5" activeIndex={index} onSelect={handleSelect}>
       {info.map((slide, idx) => (
         <Carousel.Item key={idx}>
           <div className="carousel-container">
