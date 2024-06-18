@@ -56,18 +56,20 @@ const ServiceForm = () => {
     <Form onSubmit={handleSubmit}>
       <Form.Group>
         <Form.Label>Services Required</Form.Label>
-        <div>
+        <p className="mb-1">Select all that apply:</p>
+        <Row className="mb-2">
           {serviceReq.map((service, idx) => (
-            <Form.Check
-              key={idx}
-              type="checkbox"
-              label={service}
-              name="services"
-              value={service}
-              onChange={handleChange}
-            />
+            <Col key={idx} sm={12} lg={6}>
+              <Form.Check
+                type="checkbox"
+                label={service}
+                name="services"
+                value={service}
+                onChange={handleChange}
+              />
+            </Col>
           ))}
-        </div>
+        </Row>
       </Form.Group>
 
       <Form.Group>
@@ -77,59 +79,71 @@ const ServiceForm = () => {
           name="dateOfService"
           onChange={handleChange}
         />
-      </Form.Group>
 
-      <Row>
-        <Col>
-          <Form.Group>
-            <Form.Label>Start Time</Form.Label>
+        <Row>
+          <Col>
+            <p className="mb-1">Start Time*</p>
             <Form.Control
               type="time"
               name="startTime"
               onChange={handleChange}
             />
-          </Form.Group>
-        </Col>
-        <Col>
-          <Form.Group>
-            <Form.Label>End Time</Form.Label>
+          </Col>
+          <Col>
+            <p className="mb-1">End Time*</p>
             <Form.Control type="time" name="endTime" onChange={handleChange} />
-          </Form.Group>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
 
-      <Form.Group>
-        <Form.Label>Deponent</Form.Label>
-        <Form.Control type="text" name="deponent" onChange={handleChange} />
+        <Form.Control
+          placeholder="Deponent*"
+          type="text"
+          name="deponent"
+          onChange={handleChange}
+        />
+
+        <Form.Control
+          placeholder="Location*"
+          type="text"
+          name="location"
+          onChange={handleChange}
+        />
+
+        <Form.Control
+          placeholder="Case Name*"
+          type="text"
+          name="caseName"
+          onChange={handleChange}
+        />
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Location</Form.Label>
-        <Form.Control type="text" name="location" onChange={handleChange} />
-      </Form.Group>
+        <Form.Label>Contact Information</Form.Label>
 
-      <Form.Group>
-        <Form.Label>Case Name</Form.Label>
-        <Form.Control type="text" name="caseName" onChange={handleChange} />
-      </Form.Group>
+        <Form.Control
+          placeholder="Name*"
+          type="text"
+          name="name"
+          onChange={handleChange}
+        />
 
-      <Form.Group>
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" name="name" onChange={handleChange} />
-      </Form.Group>
+        <Form.Control
+          placeholder="Email*"
+          type="email"
+          name="email"
+          onChange={handleChange}
+        />
 
-      <Form.Group>
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" name="email" onChange={handleChange} />
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Label>Phone</Form.Label>
-        <Form.Control type="tel" name="phone" onChange={handleChange} />
+        <Form.Control
+          placeholder="Phone*"
+          type="tel"
+          name="phone"
+          onChange={handleChange}
+        />
       </Form.Group>
 
       <Button variant="primary" type="submit">
-        Submit
+        Schedule a Deposition
       </Button>
     </Form>
   );

@@ -1,22 +1,20 @@
-body {
-    margin: 20px;
-  }
-  
-  form {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-  
-  .form-label {
-    font-weight: bold;
-  }
-  
-  button {
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgb(var(--secondary-rgb) / 2%);
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}

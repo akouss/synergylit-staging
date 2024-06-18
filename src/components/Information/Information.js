@@ -17,12 +17,12 @@ function Information() {
       <Row>
         <Col sm>
           <div id="schedule" className="anchor-section" />
-          <h2>Schedule a Deposition</h2>
+          <h3 className="subtitle">Schedule Today!</h3>
           <Form />
         </Col>
         <Col sm>
           <div id="contact" className="anchor-section" />
-          <h2>Contact Us</h2>
+          <h3 className="subtitle">Contact Us</h3>
           <ContactUs />
         </Col>
       </Row>

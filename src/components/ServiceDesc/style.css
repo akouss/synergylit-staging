@@ -1,34 +1,34 @@
 .services {
-    background: white;
-    margin-bottom: 3rem;
-  }
+  background: white;
+  margin-bottom: 3rem;
+}
 
-  .services .title {
-    color: var(--secondary);
-    background-color: rgb(var(--primary-rgb)/8%);
-    margin-bottom: 2.5rem;
-    padding: 0.75rem;
-    border-radius: 10px;
-  }
-  .services .item {
-   display: flex;
-   align-items: center;
-   margin-bottom: 2rem;
-   color: var(--medium);
-  }
-  
-  .services .item .icon {
-    font-size: 2rem; 
-    margin-right: 1rem; 
-    color: var(--primary);
-  }
-  .services .item .desc {
-    text-align: left;
-  }
-  .services .anchor-section {
-    position: relative;
-    padding-top: 10rem;
-    margin-top: -10rem;
+.services .title {
+  color: var(--secondary);
+  background-color: rgb(var(--primary-rgb) / 8%);
+  margin-bottom: 2.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+.services .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: var(--medium);
+}
+
+.services .item .icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--primary);
+}
+.services .item .desc {
+  text-align: left;
+}
+.services .anchor-section {
+  position: relative;
+  padding-top: 10rem;
+  margin-top: -10rem;
 }
 
 @media (max-width: 1200px) {
@@ -45,7 +45,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .services .anchor-section {
     padding-top: 22rem;
     margin-top: -22rem;
@@ -58,4 +58,3 @@
     margin-top: -22rem;
   }
 }
-  
