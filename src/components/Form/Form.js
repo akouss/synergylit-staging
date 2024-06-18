@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 
+// * Style
 import "./style.css";
 
 // * Data
@@ -54,6 +55,7 @@ const ServiceForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
+      {/* Services Required Section */}
       <Form.Group>
         <Form.Label>Services Required</Form.Label>
         <p className="mb-1">Select all that apply:</p>
@@ -66,12 +68,14 @@ const ServiceForm = () => {
                 name="services"
                 value={service}
                 onChange={handleChange}
+                className="custom-checkbox"
               />
             </Col>
           ))}
         </Row>
       </Form.Group>
 
+      {/* Date and Time Section */}
       <Form.Group>
         <Form.Label>Date of Service</Form.Label>
         <Form.Control
@@ -79,36 +83,47 @@ const ServiceForm = () => {
           name="dateOfService"
           onChange={handleChange}
         />
+      </Form.Group>
 
-        <Row>
-          <Col>
+      <Row>
+        <Col>
+          <Form.Group>
             <p className="mb-1">Start Time*</p>
             <Form.Control
               type="time"
               name="startTime"
               onChange={handleChange}
             />
-          </Col>
-          <Col>
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group>
             <p className="mb-1">End Time*</p>
             <Form.Control type="time" name="endTime" onChange={handleChange} />
-          </Col>
-        </Row>
+          </Form.Group>
+        </Col>
+      </Row>
 
+      {/* Deponent and Location Section */}
+      <Form.Group>
         <Form.Control
           placeholder="Deponent*"
           type="text"
           name="deponent"
           onChange={handleChange}
         />
+      </Form.Group>
 
+      <Form.Group>
         <Form.Control
           placeholder="Location*"
           type="text"
           name="location"
           onChange={handleChange}
         />
+      </Form.Group>
 
+      <Form.Group>
         <Form.Control
           placeholder="Case Name*"
           type="text"
@@ -117,31 +132,39 @@ const ServiceForm = () => {
         />
       </Form.Group>
 
+      {/* Contact Information Section */}
       <Form.Group>
         <Form.Label>Contact Information</Form.Label>
 
-        <Form.Control
-          placeholder="Name*"
-          type="text"
-          name="name"
-          onChange={handleChange}
-        />
+        <Form.Group>
+          <Form.Control
+            placeholder="Name*"
+            type="text"
+            name="name"
+            onChange={handleChange}
+          />
+        </Form.Group>
 
-        <Form.Control
-          placeholder="Email*"
-          type="email"
-          name="email"
-          onChange={handleChange}
-        />
+        <Form.Group>
+          <Form.Control
+            placeholder="Email*"
+            type="email"
+            name="email"
+            onChange={handleChange}
+          />
+        </Form.Group>
 
-        <Form.Control
-          placeholder="Phone*"
-          type="tel"
-          name="phone"
-          onChange={handleChange}
-        />
+        <Form.Group>
+          <Form.Control
+            placeholder="Phone*"
+            type="tel"
+            name="phone"
+            onChange={handleChange}
+          />
+        </Form.Group>
       </Form.Group>
 
+      {/* Submit Button */}
       <Button variant="primary" type="submit">
         Schedule a Deposition
       </Button>
