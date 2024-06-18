@@ -20,13 +20,6 @@
   text-decoration: none;
 }
 
-.navBar .navbar-nav .nav-link {
-  /* color: var(--bs-primary); */
-}
-
-.navBar .navbar-nav .nav-link:hover {
-}
-
 @media (max-width: 1200px) {
   .navBar .brand img {
     width: 250px; /* Adjust for large screens */

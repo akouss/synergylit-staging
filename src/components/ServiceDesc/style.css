@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-700);
 }
 
 .services .item .icon {
@@ -27,6 +27,7 @@
 }
 .services .anchor-section {
   position: relative;
+  z-index: -1;
   padding-top: 10rem;
   margin-top: -10rem;
 }

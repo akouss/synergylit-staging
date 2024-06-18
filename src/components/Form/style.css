@@ -29,10 +29,6 @@ button {
   box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
-.custom-checkbox .form-check-label {
-  /* color: var(--bs-primary); */
-}
-
 /* Custom styles for form inputs */
 input.form-control,
 .form-control {
@@ -45,10 +41,4 @@ input.form-control:focus,
 .form-control:focus {
   border-color: var(--bs-primary);
   box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
-}
-
-/* Optional: Style for date input icon */
-input.form-control::-webkit-calendar-picker-indicator,
-.custom-input .form-control::-webkit-calendar-picker-indicator {
-  /* filter: invert(50%) sepia(100%) saturate(300%) hue-rotate(190deg); */
 }
