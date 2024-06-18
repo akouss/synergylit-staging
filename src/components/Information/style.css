@@ -1,0 +1,25 @@
+.contact {
+    background: white;
+    margin-bottom: 5rem;
+  }
+  .contact .title {
+    color: var(--dark);
+    margin-bottom: 2.5rem;
+  }
+  .contact .item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 2rem;
+   color: var(--medium);
+  }
+  .contact .item .icon {
+    font-size: 2rem; 
+    margin-right: 1rem; 
+    color: var(--primary);
+  }
+  .contact .item .desc {
+    text-align: left;
+  }
+
+  
+  

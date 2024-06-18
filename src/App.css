@@ -1,4 +1,4 @@
-.App {
+.App h1, h2{
   text-align: center;
 }
 
@@ -9,7 +9,6 @@
 }
 
 /* ** Default Colors */
-/* TODO what are the colors for the */
 Body {
   --primary: #C1AC76; 
   --secondary: #0066fe;

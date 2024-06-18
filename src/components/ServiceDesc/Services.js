@@ -9,7 +9,7 @@ import { heading, highlights } from "../../data/services";
 
 function Services() {
   return (
-    <Container className="services">
+    <Container id="services" className="services">
       <Row>
         <h1 className="title">{heading}</h1>
       </Row>
