@@ -1,30 +1,47 @@
 .information {
     background: white;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .information .title {
     color: var(--dark);
-    margin-bottom: 2.5rem;
-  }
-  .information .item {
-   display: flex;
-   align-items: center;
-   margin-bottom: 2rem;
-   color: var(--medium);
-  }
-  .information .item .icon {
-    font-size: 2rem; 
-    margin-right: 1rem; 
-    color: var(--primary);
-  }
-  .information .item .desc {
-    text-align: left;
+    margin-bottom: 1rem;
   }
   .information .anchor-section {
     position: relative;
     padding-top: 10rem;
     margin-top: -10rem;
+  }
+  .information h2{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+@media (max-width: 1200px) {
+  .information .anchor-section {
+    padding-top: 10rem;
+    margin-top: -10rem;
+  }
 }
 
+@media (max-width: 992px) {
+  .information .anchor-section {
+    padding-top: 10rem;
+    margin-top: -10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .information .anchor-section {
+    padding-top: 22rem;
+    margin-top: -22rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .information .anchor-section {
+    padding-top: 18rem;
+    margin-top: -18rem;
+  }
+}
   
   

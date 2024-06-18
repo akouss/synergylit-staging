@@ -1,6 +1,6 @@
 .services {
     background: white;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 
   }
   
@@ -29,5 +29,32 @@
     padding-top: 10rem;
     margin-top: -10rem;
 }
-  
+
+@media (max-width: 1200px) {
+  .services .anchor-section {
+    padding-top: 10rem;
+    margin-top: -10rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .services .anchor-section {
+    padding-top: 10rem;
+    margin-top: -10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services .anchor-section {
+    padding-top: 22rem;
+    margin-top: -22rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services .anchor-section {
+    padding-top: 22rem;
+    margin-top: -22rem;
+  }
+}
   
