@@ -22,6 +22,18 @@
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.4); /* Secondary color focus shadow */
 }
 
-.accordion-button.collapsed {
-  fill: var(--bs-primary);
+/* Custom styles for the accordion icons */
+.accordion-button::after {
+  /* Set the color of the icon */
+  color: white; /* Or any other color you want, e.g., red, blue, etc. */
+
+  /* Ensuring the icons are visible */
+  filter: brightness(0) invert(1); /* This line will invert the black color to white */
+}
+
+/* Styling for when the accordion item is expanded */
+.accordion-button:not(.collapsed)::after {
+  /* You might want to change the color when the accordion is not collapsed (i.e., it is open) */
+  color: white; /* Maintain consistent color or change if desired */
+  filter: brightness(0) invert(1); /* Adjust or maintain for visibility */
 }
