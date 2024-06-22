@@ -8,7 +8,7 @@ import "./style.css";
 
 function CustomAccordion() {
   return (
-    <Accordion defaultActiveKey="0">
+    <Accordion defaultActiveKey="0" data-bs-theme="dark">
       {services.map((item, index) => (
         <Accordion.Item eventKey={item.id} key={item.id}>
           <Accordion.Header>{item.title.toUpperCase()}</Accordion.Header>

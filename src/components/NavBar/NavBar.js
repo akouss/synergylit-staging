@@ -14,8 +14,11 @@ function NavBar() {
     <Navbar
       collapseOnSelect
       className="navBar"
+      Navbar
+      bg="dark"
+      data-bs-theme="dark"
       expand="md"
-      fixed="top"
+      // fixed="top"
       sticky="top"
     >
       <Navbar.Brand href="#" className="brand">
