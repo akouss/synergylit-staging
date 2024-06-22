@@ -1,15 +1,32 @@
 .navBar {
+  /* Layer a semi-transparent black overlay on top of the background image */
   background: rgba(0, 0, 0, 0.8);
+  /* transition: background-color 0.3s ease-in-out; */
+  background-image: none; /* Transparent background by default */
+}
+
+.navBar.top {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/stone-background-with-golden-strokes_130.jpg");
+  background-size: cover; /* Ensure the image covers the entire Navbar */
+  background-position: center; /* Center the background image */
 }
 
 .navBar .brand {
-  font-weight: 900;
-  color: var(--bs-primary);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .navBar .brand img {
-  width: 250px; /* Default width */
+  height: 8rem; /* Default height */
+  padding: 1rem;
+}
+
+.navBar .brand-text {
+  text-align: left;
+  color: var(--bs-primary);
+  /* color: var(--bs-white); */
+  text-transform: uppercase; /* Capitalize all letters */
 }
 
 .navBar .mysls {
@@ -22,24 +39,24 @@
 
 @media (max-width: 1200px) {
   .navBar .brand img {
-    width: 250px; /* Adjust for large screens */
+    height: 8rem; /* Adjust for large screens */
   }
 }
 
 @media (max-width: 992px) {
   .navBar .brand img {
-    width: 225px; /* Adjust for medium screens */
+    height: 8rem; /* Adjust for medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .navBar .brand img {
-    width: 200px; /* Adjust for small screens */
+    height: 8rem; /* Adjust for small screens */
   }
 }
 
 @media (max-width: 576px) {
   .navBar .brand img {
-    width: 175px; /* Adjust for extra small screens */
+    height: 8rem; /* Adjust for extra small screens */
   }
 }

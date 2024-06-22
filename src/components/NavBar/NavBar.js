@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/jsx-no-target-blank */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 
 // * Style
@@ -10,19 +8,42 @@ import "./style.css";
 import logo from "../../assets/Logo.png";
 
 function NavBar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  // Effect to add and remove the scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50; // Change the number based on when you want to switch styles
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
   return (
     <Navbar
       collapseOnSelect
-      className="navBar"
-      Navbar
+      className={`navBar ${scrolled ? "" : "top"}`}
       bg="dark"
       data-bs-theme="dark"
       expand="md"
-      // fixed="top"
       sticky="top"
     >
       <Navbar.Brand href="#" className="brand">
         <img src={logo} alt="Synergy Litigation Services logo" />
+        <div className="brand-text">
+          Synergy
+          <br />
+          Litigation
+          <br />
+          Services
+        </div>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbar-content" />
       <Navbar.Collapse id="navbar-content">
