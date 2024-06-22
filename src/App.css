@@ -6,7 +6,7 @@ a {
 
 .safe-area {
   display: flex;
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+  /* padding: 0.75rem 0.75rem 0.75rem 0.75rem; */
   flex-direction: column;
 }
 
