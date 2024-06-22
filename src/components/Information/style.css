@@ -16,8 +16,8 @@
 .information .anchor-section {
   position: relative;
   z-index: -1;
-  padding-top: 9rem;
-  margin-top: -9rem;
+  padding-top: 10rem;
+  margin-top: -10rem;
 }
 .information h2 {
   margin-bottom: 1rem;
@@ -26,28 +26,28 @@
 
 @media (max-width: 1200px) {
   .information .anchor-section {
-    padding-top: 9rem;
-    margin-top: -9rem;
+    padding-top: 10rem;
+    margin-top: -10rem;
   }
 }
 
 @media (max-width: 992px) {
   .information .anchor-section {
-    padding-top: 7rem;
-    margin-top: -7rem;
+    padding-top: 10rem;
+    margin-top: -10rem;
   }
 }
 
 @media (max-width: 767px) {
   .information .anchor-section {
-    padding-top: 22rem;
-    margin-top: -22rem;
+    padding-top: 25rem;
+    margin-top: -25rem;
   }
 }
 
 @media (max-width: 576px) {
   .information .anchor-section {
-    padding-top: 21rem;
-    margin-top: -21rem;
+    padding-top: 24.5rem;
+    margin-top: -24.5rem;
   }
 }

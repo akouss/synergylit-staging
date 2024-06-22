@@ -48,14 +48,14 @@
 
 @media (max-width: 767px) {
   .services .anchor-section {
-    padding-top: 22rem;
-    margin-top: -22rem;
+    padding-top: 25rem;
+    margin-top: -25rem;
   }
 }
 
 @media (max-width: 576px) {
   .services .anchor-section {
-    padding-top: 22rem;
-    margin-top: -22rem;
+    padding-top: 25rem;
+    margin-top: -25rem;
   }
 }
