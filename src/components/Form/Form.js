@@ -7,13 +7,9 @@ import "./style.css";
 // * Data
 const serviceReq = [
   "Court Reporter",
-  "Realtime Reporter",
   "Videographer",
   "Interpreter",
-  "Digital Deposition",
   "Videoconference",
-  "Courtroom Playback",
-  "Trial Presentation",
 ];
 
 const ServiceForm = () => {
