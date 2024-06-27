@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col, Alert } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 
 // * Style
@@ -27,6 +27,8 @@ const ServiceForm = () => {
     phone: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const form = useRef(); // Create a ref for the form
 
   const handleChange = (e) => {
@@ -44,29 +46,56 @@ const ServiceForm = () => {
         [name]: value,
       }));
     }
+    // Clear the error for a field when the user starts correcting it
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
   };
 
   const handleSubmit = (e) => {
-    console.log("handel sublmit");
     e.preventDefault();
+    const newErrors = validateForm();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_EMAILJS_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log("Email successfully sent!", result.text);
-          // Handle successful email sending here (e.g., clear form, show success message)
-        },
-        (error) => {
-          console.log("Failed to send email.", error.text);
-          // Handle errors here
-        }
-      );
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      // Proceed with form submission
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then(
+          (result) => {
+            console.log("Email successfully sent!", result.text);
+            Alert("Email successfully sent!");
+            // Optionally reset form here or give further success feedback
+          },
+          (error) => {
+            console.log("Failed to send email.", error.text);
+            Alert("Failed to send email.");
+            // Optionally handle sending errors here
+          }
+        );
+    }
+  };
+
+  // Validates each field and returns an object with errors
+  const validateForm = () => {
+    let errs = {};
+    if (!formData.name) errs.name = "Name is required";
+    if (!formData.email) errs.email = "Email is required";
+    if (!formData.phone) errs.phone = "Phone is required";
+    if (!formData.dateOfService)
+      errs.dateOfService = "Date of service is required";
+    if (!formData.startTime) errs.startTime = "Start time is required";
+    if (!formData.endTime) errs.endTime = "End time is required";
+    if (!formData.deponent) errs.deponent = "Deponent is required";
+    if (!formData.location) errs.location = "Location is required";
+    if (!formData.caseName) errs.caseName = "Case name is required";
+    return errs;
   };
 
   return (
@@ -79,8 +108,9 @@ const ServiceForm = () => {
         <p className="mb-1">Select all that apply:</p>
         <Row className="mb-2">
           {serviceReq.map((service, idx) => (
-            <Col key={idx} sm={12} lg={6}>
+            <Col sm={12} lg={6}>
               <Form.Check
+                key={idx}
                 type="checkbox"
                 label={service}
                 name="services"
@@ -100,7 +130,11 @@ const ServiceForm = () => {
           type="date"
           name="dateOfService"
           onChange={handleChange}
+          isInvalid={!!errors.dateOfService}
         />
+        <Form.Control.Feedback type="invalid">
+          {errors.dateOfService}
+        </Form.Control.Feedback>
       </Form.Group>
 
       <Row>
@@ -111,13 +145,25 @@ const ServiceForm = () => {
               type="time"
               name="startTime"
               onChange={handleChange}
+              isInvalid={!!errors.startTime}
             />
+            <Form.Control.Feedback type="invalid">
+              {errors.startTime}
+            </Form.Control.Feedback>
           </Form.Group>
         </Col>
         <Col>
           <Form.Group>
             <p className="mb-1">End Time*</p>
-            <Form.Control type="time" name="endTime" onChange={handleChange} />
+            <Form.Control
+              type="time"
+              name="endTime"
+              onChange={handleChange}
+              isInvalid={!!errors.endTime}
+            />
+            <Form.Control.Feedback type="invalid">
+              {errors.endTime}
+            </Form.Control.Feedback>
           </Form.Group>
         </Col>
       </Row>
@@ -129,7 +175,11 @@ const ServiceForm = () => {
           type="text"
           name="deponent"
           onChange={handleChange}
+          isInvalid={!!errors.deponent}
         />
+        <Form.Control.Feedback type="invalid">
+          {errors.deponent}
+        </Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group>
@@ -138,7 +188,11 @@ const ServiceForm = () => {
           type="text"
           name="location"
           onChange={handleChange}
+          isInvalid={!!errors.location}
         />
+        <Form.Control.Feedback type="invalid">
+          {errors.location}
+        </Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group>
@@ -147,7 +201,11 @@ const ServiceForm = () => {
           type="text"
           name="caseName"
           onChange={handleChange}
+          isInvalid={!!errors.caseName}
         />
+        <Form.Control.Feedback type="invalid">
+          {errors.caseName}
+        </Form.Control.Feedback>
       </Form.Group>
 
       {/* Contact Information Section */}
@@ -160,7 +218,11 @@ const ServiceForm = () => {
             type="text"
             name="name"
             onChange={handleChange}
+            isInvalid={!!errors.name}
           />
+          <Form.Control.Feedback type="invalid">
+            {errors.name}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
@@ -169,7 +231,11 @@ const ServiceForm = () => {
             type="email"
             name="email"
             onChange={handleChange}
+            isInvalid={!!errors.email}
           />
+          <Form.Control.Feedback type="invalid">
+            {errors.email}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
@@ -178,7 +244,11 @@ const ServiceForm = () => {
             type="tel"
             name="phone"
             onChange={handleChange}
+            isInvalid={!!errors.phone}
           />
+          <Form.Control.Feedback type="invalid">
+            {errors.phone}
+          </Form.Control.Feedback>
         </Form.Group>
       </Form.Group>
 
