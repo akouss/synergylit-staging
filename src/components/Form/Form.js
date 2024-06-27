@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
+import emailjs from "@emailjs/browser";
 
 // * Style
 import "./style.css";
@@ -26,6 +27,8 @@ const ServiceForm = () => {
     phone: "",
   });
 
+  const form = useRef(); // Create a ref for the form
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
@@ -44,13 +47,32 @@ const ServiceForm = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log("handel sublmit");
     e.preventDefault();
-    console.log(formData);
-    // Handle form submission logic
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log("Email successfully sent!", result.text);
+          // Handle successful email sending here (e.g., clear form, show success message)
+        },
+        (error) => {
+          console.log("Failed to send email.", error.text);
+          // Handle errors here
+        }
+      );
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form ref={form} onSubmit={handleSubmit}>
+      {/* Form content remains unchanged, just ensure all `name` attributes match your EmailJS template variables */}
+      {/* Add or adjust the 'name' attribute for each input field as needed to match your EmailJS template parameters */}
       {/* Services Required Section */}
       <Form.Group>
         <Form.Label>Services Required</Form.Label>
