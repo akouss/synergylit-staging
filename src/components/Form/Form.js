@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Form, Button, Row, Col, Toast, ToastContainer } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
+
+// * Component
+import Toast from "../Toast";
 
 // * Style
 import "./style.css";
-
-// * Images
-import logo from "../../assets/Logo.png";
 
 // * Data
 const serviceReq = [
@@ -27,41 +27,6 @@ const initialFormData = {
   name: "",
   email: "",
   phone: "",
-};
-
-const CustomToast = ({ showToast, setShowToast, toastMessage, toastType }) => {
-  return (
-    <ToastContainer
-      position="top-end"
-      style={{
-        position: "fixed",
-      }}
-    >
-      <Toast
-        className="d-inline-block m-2"
-        onClose={() => setShowToast(false)}
-        show={showToast}
-        delay={3000}
-        autohide
-        animation
-        bg={toastType.toLowerCase()}
-      >
-        <Toast.Header>
-          <img
-            src={logo}
-            className="rounded me-2 "
-            alt=""
-            style={{ maxHeight: "30px" }}
-          />
-          <strong className="me-auto">Synergy Litigation Services</strong>
-          <small>Now</small>
-        </Toast.Header>
-        <Toast.Body className={toastType === "Dark" && "text-white"}>
-          {toastMessage}
-        </Toast.Body>
-      </Toast>
-    </ToastContainer>
-  );
 };
 
 const ServiceForm = () => {
@@ -309,7 +274,7 @@ const ServiceForm = () => {
           Schedule a Deposition
         </Button>
       </Form>
-      <CustomToast
+      <Toast
         showToast={showToast}
         setShowToast={setShowToast}
         toastMessage={toastMessage}
