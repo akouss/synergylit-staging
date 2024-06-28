@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Form, Button, Row, Col, Alert } from "react-bootstrap";
+import { Form, Button, Row, Col, Toast, ToastContainer } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 
 // * Style
 import "./style.css";
+
+// * Images
+import logo from "../../assets/Logo.png";
 
 // * Data
 const serviceReq = [
@@ -13,21 +16,60 @@ const serviceReq = [
   "Videoconference",
 ];
 
-const ServiceForm = () => {
-  const [formData, setFormData] = useState({
-    services: [],
-    dateOfService: "",
-    startTime: "",
-    endTime: "",
-    deponent: "",
-    location: "",
-    caseName: "",
-    name: "",
-    email: "",
-    phone: "",
-  });
+const initialFormData = {
+  services: [],
+  dateOfService: "",
+  startTime: "",
+  endTime: "",
+  deponent: "",
+  location: "",
+  caseName: "",
+  name: "",
+  email: "",
+  phone: "",
+};
 
+const CustomToast = ({ showToast, setShowToast, toastMessage, toastType }) => {
+  return (
+    <ToastContainer
+      position="top-end"
+      style={{
+        position: "fixed",
+      }}
+    >
+      <Toast
+        className="d-inline-block m-2"
+        onClose={() => setShowToast(false)}
+        show={showToast}
+        delay={3000}
+        autohide
+        animation
+        bg={toastType.toLowerCase()}
+      >
+        <Toast.Header>
+          <img
+            src={logo}
+            className="rounded me-2 "
+            alt=""
+            style={{ maxHeight: "30px" }}
+          />
+          <strong className="me-auto">Synergy Litigation Services</strong>
+          <small>Now</small>
+        </Toast.Header>
+        <Toast.Body className={toastType === "Dark" && "text-white"}>
+          {toastMessage}
+        </Toast.Body>
+      </Toast>
+    </ToastContainer>
+  );
+};
+
+const ServiceForm = () => {
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState("");
 
   const form = useRef(); // Create a ref for the form
 
@@ -52,6 +94,12 @@ const ServiceForm = () => {
     }
   };
 
+  const handleShowToast = (message, type) => {
+    setToastMessage(message);
+    setToastType(type);
+    setShowToast(true);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = validateForm();
@@ -70,12 +118,15 @@ const ServiceForm = () => {
         .then(
           (result) => {
             console.log("Email successfully sent!", result.text);
-            Alert("Email successfully sent!");
+            handleShowToast("Email successfully sent!", "dark");
+            setFormData(initialFormData); // Reset the form data
+            setErrors({}); // Clear any errors if needed
+            form.current.reset();
             // Optionally reset form here or give further success feedback
           },
           (error) => {
             console.log("Failed to send email.", error.text);
-            Alert("Failed to send email.");
+            handleShowToast("Failed to send email. Please try again.", "dark");
             // Optionally handle sending errors here
           }
         );
@@ -99,164 +150,172 @@ const ServiceForm = () => {
   };
 
   return (
-    <Form ref={form} onSubmit={handleSubmit}>
-      {/* Form content remains unchanged, just ensure all `name` attributes match your EmailJS template variables */}
-      {/* Add or adjust the 'name' attribute for each input field as needed to match your EmailJS template parameters */}
-      {/* Services Required Section */}
-      <Form.Group>
-        <Form.Label>Services Required</Form.Label>
-        <p className="mb-1">Select all that apply:</p>
-        <Row className="mb-2">
-          {serviceReq.map((service, idx) => (
-            <Col sm={12} lg={6}>
-              <Form.Check
-                key={idx}
-                type="checkbox"
-                label={service}
-                name="services"
-                value={service}
+    <>
+      <Form ref={form} onSubmit={handleSubmit}>
+        {/* Form content remains unchanged, just ensure all `name` attributes match your EmailJS template variables */}
+        {/* Add or adjust the 'name' attribute for each input field as needed to match your EmailJS template parameters */}
+        {/* Services Required Section */}
+        <Form.Group>
+          <Form.Label>Services Required</Form.Label>
+          <p className="mb-1">Select all that apply:</p>
+          <Row className="mb-2">
+            {serviceReq.map((service, idx) => (
+              <Col sm={12} lg={6}>
+                <Form.Check
+                  key={idx}
+                  type="checkbox"
+                  label={service}
+                  name="services"
+                  value={service}
+                  onChange={handleChange}
+                  className="custom-checkbox"
+                />
+              </Col>
+            ))}
+          </Row>
+        </Form.Group>
+
+        {/* Date and Time Section */}
+        <Form.Group>
+          <Form.Label>Date of Service</Form.Label>
+          <Form.Control
+            type="date"
+            name="dateOfService"
+            onChange={handleChange}
+            isInvalid={!!errors.dateOfService}
+          />
+          <Form.Control.Feedback type="invalid">
+            {errors.dateOfService}
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Row>
+          <Col>
+            <Form.Group>
+              <p className="mb-1">Start Time*</p>
+              <Form.Control
+                type="time"
+                name="startTime"
                 onChange={handleChange}
-                className="custom-checkbox"
+                isInvalid={!!errors.startTime}
               />
-            </Col>
-          ))}
+              <Form.Control.Feedback type="invalid">
+                {errors.startTime}
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group>
+              <p className="mb-1">End Time*</p>
+              <Form.Control
+                type="time"
+                name="endTime"
+                onChange={handleChange}
+                isInvalid={!!errors.endTime}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.endTime}
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Col>
         </Row>
-      </Form.Group>
 
-      {/* Date and Time Section */}
-      <Form.Group>
-        <Form.Label>Date of Service</Form.Label>
-        <Form.Control
-          type="date"
-          name="dateOfService"
-          onChange={handleChange}
-          isInvalid={!!errors.dateOfService}
-        />
-        <Form.Control.Feedback type="invalid">
-          {errors.dateOfService}
-        </Form.Control.Feedback>
-      </Form.Group>
-
-      <Row>
-        <Col>
-          <Form.Group>
-            <p className="mb-1">Start Time*</p>
-            <Form.Control
-              type="time"
-              name="startTime"
-              onChange={handleChange}
-              isInvalid={!!errors.startTime}
-            />
-            <Form.Control.Feedback type="invalid">
-              {errors.startTime}
-            </Form.Control.Feedback>
-          </Form.Group>
-        </Col>
-        <Col>
-          <Form.Group>
-            <p className="mb-1">End Time*</p>
-            <Form.Control
-              type="time"
-              name="endTime"
-              onChange={handleChange}
-              isInvalid={!!errors.endTime}
-            />
-            <Form.Control.Feedback type="invalid">
-              {errors.endTime}
-            </Form.Control.Feedback>
-          </Form.Group>
-        </Col>
-      </Row>
-
-      {/* Deponent and Location Section */}
-      <Form.Group>
-        <Form.Control
-          placeholder="Deponent*"
-          type="text"
-          name="deponent"
-          onChange={handleChange}
-          isInvalid={!!errors.deponent}
-        />
-        <Form.Control.Feedback type="invalid">
-          {errors.deponent}
-        </Form.Control.Feedback>
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Control
-          placeholder="Location*"
-          type="text"
-          name="location"
-          onChange={handleChange}
-          isInvalid={!!errors.location}
-        />
-        <Form.Control.Feedback type="invalid">
-          {errors.location}
-        </Form.Control.Feedback>
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Control
-          placeholder="Case Name*"
-          type="text"
-          name="caseName"
-          onChange={handleChange}
-          isInvalid={!!errors.caseName}
-        />
-        <Form.Control.Feedback type="invalid">
-          {errors.caseName}
-        </Form.Control.Feedback>
-      </Form.Group>
-
-      {/* Contact Information Section */}
-      <Form.Group>
-        <Form.Label>Contact Information</Form.Label>
-
+        {/* Deponent and Location Section */}
         <Form.Group>
           <Form.Control
-            placeholder="Name*"
+            placeholder="Deponent*"
             type="text"
-            name="name"
+            name="deponent"
             onChange={handleChange}
-            isInvalid={!!errors.name}
+            isInvalid={!!errors.deponent}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.name}
+            {errors.deponent}
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
           <Form.Control
-            placeholder="Email*"
-            type="email"
-            name="email"
+            placeholder="Location*"
+            type="text"
+            name="location"
             onChange={handleChange}
-            isInvalid={!!errors.email}
+            isInvalid={!!errors.location}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.email}
+            {errors.location}
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
           <Form.Control
-            placeholder="Phone*"
-            type="tel"
-            name="phone"
+            placeholder="Case Name*"
+            type="text"
+            name="caseName"
             onChange={handleChange}
-            isInvalid={!!errors.phone}
+            isInvalid={!!errors.caseName}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.phone}
+            {errors.caseName}
           </Form.Control.Feedback>
         </Form.Group>
-      </Form.Group>
 
-      {/* Submit Button */}
-      <Button variant="primary" type="submit">
-        Schedule a Deposition
-      </Button>
-    </Form>
+        {/* Contact Information Section */}
+        <Form.Group>
+          <Form.Label>Contact Information</Form.Label>
+
+          <Form.Group>
+            <Form.Control
+              placeholder="Name*"
+              type="text"
+              name="name"
+              onChange={handleChange}
+              isInvalid={!!errors.name}
+            />
+            <Form.Control.Feedback type="invalid">
+              {errors.name}
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Control
+              placeholder="Email*"
+              type="email"
+              name="email"
+              onChange={handleChange}
+              isInvalid={!!errors.email}
+            />
+            <Form.Control.Feedback type="invalid">
+              {errors.email}
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Control
+              placeholder="Phone*"
+              type="tel"
+              name="phone"
+              onChange={handleChange}
+              isInvalid={!!errors.phone}
+            />
+            <Form.Control.Feedback type="invalid">
+              {errors.phone}
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Form.Group>
+
+        {/* Submit Button */}
+        <Button variant="primary" type="submit">
+          Schedule a Deposition
+        </Button>
+      </Form>
+      <CustomToast
+        showToast={showToast}
+        setShowToast={setShowToast}
+        toastMessage={toastMessage}
+        toastType={toastType}
+      />
+    </>
   );
 };
 
