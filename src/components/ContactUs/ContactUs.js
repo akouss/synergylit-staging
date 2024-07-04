@@ -11,7 +11,7 @@ const contact = {
   },
   phone: "(123)456-7890",
   fax: "(123)456-7890",
-  email: "company@email.com",
+  email: "admin@synergylit.com",
 };
 
 const { address, phone, fax, email } = contact;

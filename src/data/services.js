@@ -19,36 +19,35 @@ const highlights = [
 const services = [
   {
     id: "1",
-    title: "Realtime",
-    description:
-      "Realtime allows you to connect directly to a court reporter during a deposition or court session to view and interact with the transcript live, similar to closed captioning. You can highlight and search the transcript on an iPad using iCVNet. After the deposition, the transcript can be imported to CaseView Net on your PC for further marking and reporting.",
+    title: "Stenographic Court Reporting",
+    description: `At Synergy, our stenographic court reporters harness the power of advanced steno machines to capture every detail of your legal proceedings. These machines have evolved into high-powered computers, allowing our expert reporters to deliver instant, highly accurate text. Utilizing customized CAT (computer-aided transcription) software, our reporters can format, edit, and deliver final transcripts with precision.`,
   },
   {
     id: "2",
-    title: "Digital/Video Depositions",
+    title: "Expert Realtime Transcription",
 
-    description: `Synergy Litigation Services offers professional court reporting tailored to meet tight schedules using advanced, reliable technology. We serve all sizes of firms across various litigation areas, with a history of handling everything from complex cases to general depositions, arbitrations, and meetings.\n
-    We now provide Digital Depositions, a cost-effective alternative to traditional stenographic reporting, using multi-track, broadcast-quality recording equipment. Recognized by federal and civil courts nationwide, these depositions comply fully with the Rules of Civil Procedure.\n
-    Our package includes a certified transcript and a complimentary video, delivered on a DVD or thumb drive at the deposition's conclusion.`,
+    description: `Experience the efficiency of Synergy Litigation Services’ realtime court reporting. Instantly read, search, and annotate testimonies during your case. Our seasoned realtime court reporters manage all technical aspects, producing an immediate (realtime) transcript during depositions, along with a comprehensive copy upon completion. Available for both in-person and remote depositions, our services keep you connected and informed.`,
   },
 
   {
     id: "3",
-    title: "Mobile Videoconferencing",
-    description: `Struggling to arrange depositions for witnesses in distant or remote locations? Synergy Litigation Services' Mobile Videoconferencing allows you to conduct face-to-face meetings safely and easily from your office, requiring only high-speed internet and a mobile device with a webcam.
-    Our service supports full videoconferencing on a range of devices including PC laptops, Android devices, MacBooks, iPads, tablets, iPhones, and smartphones with cameras, making it the most cost-effective solution for participating in depositions.`,
+    title: "Deposition Management",
+    description: `Simplify and streamline your deposition management with Synergy Litigation Services. We offer the technology, international reach, and experienced case managers you need to excel in today’s competitive litigation landscape. Reduce stress, cut costs, and enhance your case management efficiency with our expert team by your side.`,
   },
   {
     id: "4",
-    title: "Video Synchronization",
-    description: `Synergy Litigation Services enables you to view both the deponent and their testimony in the video recording. We sync the deposition video with the transcript, allowing the testimony to display as it occurs in the recording. You can also search the video record for key testimony and import the video files into your trial presentation software`,
+    title: "Intelligent Deposition Summaries",
+    description: `Our patent-pending artificial intelligence technology at Synergy Litigation Services revolutionizes deposition summaries. It automates page/line summaries with pinpoint accuracy and intelligently extracts key admissions based on the complaint’s facts. What sets our Intelligent Summary+ apart is the Deposition Memo, which organizes summaries thematically around crucial legal and factual issues. Gain quick insights and start building your winning strategy from the get-go. Plus, we offer same-day turnaround if transcripts are received during business hours, even if they weren’t produced by us. For more information, contact us at admin@synergylit.com.`,
   },
   {
     id: "5",
-    title: "Transcription Services",
-    description: `Synergy Litigation Services offers a comprehensive range of transcription options. 
-    Our transcriptionists can convert various forms of recorded speech—audio, video, and digital recordings of interviews or proceedings—into hard copy or electronic text with speed and accuracy. 
-    Just contact us with your needs. Our formats include: Realtime, Minuscript, E-transcript, ASCII, DVD/CD, RealLegal Binder, Summation, Amicus`,
+    title: "Secure Audio and Video Transcription",
+    description: `Audio and video transcripts are vital for legal practices, insurance companies, and corporations. They ensure regulatory compliance, support risk management, and provide essential documentation for litigation. Accuracy is crucial, as even minor errors can affect credibility and legal outcomes. Trust Synergy’s skilled transcriptionists to deliver flawless transcripts that uphold your professional standards.`,
+  },
+  {
+    id: "6",
+    title: "Expert Document Translation",
+    description: `Don’t let your documents get lost in translation. Synergy Litigation Services ensures your documents meet stringent scrutiny with our expert translation services. Have confidence in the accuracy and quality of every translated document.`,
   },
 ];
 

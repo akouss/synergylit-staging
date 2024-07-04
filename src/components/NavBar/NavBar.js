@@ -55,7 +55,7 @@ function NavBar() {
           <Button
             variant="primary"
             as="a"
-            href="https://google.com"
+            href="https://synergylit.reporterbase.com/contact"
             target="_blank"
             rel="noreferrer noopener"
           >
