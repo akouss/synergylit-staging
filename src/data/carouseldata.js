@@ -24,7 +24,7 @@ const info = [
   },
   {
     image: img3,
-    title: "Stenographic Court Reporting",
+    title: "Intelligent Deposition Summaries",
     description: "Revolutionizing Legal Insights",
   },
 ];
