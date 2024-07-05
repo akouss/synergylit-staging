@@ -14,18 +14,18 @@ import img3 from "../assets/img3-o.jpg";
 const info = [
   {
     image: img1,
-    title: "First slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    title: "Stenographic Court Reporting",
+    description: "Precision and Speed at Your Fingertips",
   },
   {
     image: img2,
-    title: "Second slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    title: "Expert Realtime Transcription",
+    description: "Instant Access to Testimonies",
   },
   {
     image: img3,
-    title: "Third slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    title: "Stenographic Court Reporting",
+    description: "Revolutionizing Legal Insights",
   },
 ];
 
