@@ -4,13 +4,12 @@ import "./style.css";
 // * Data
 const contact = {
   address: {
-    street: "1234 Street Ave",
-    city: "City",
-    state: "ST",
-    zipcode: "12345",
+    street: "325 S. Old Woodward Suite 200",
+    city: "Birmingham",
+    state: "MI",
+    zipcode: "48009",
   },
-  phone: "(123)456-7890",
-  fax: "(123)456-7890",
+  phone: "(248)730-7000",
   email: "admin@synergylit.com",
 };
 
@@ -28,8 +27,6 @@ const ContactUs = () => {
         </p>
         <p>Phone:</p>
         <p>{phone}</p>
-        <p>Fax:</p>
-        <p>{fax}</p>
         <p>Email:</p>
         <p>{email}</p>
       </div>
