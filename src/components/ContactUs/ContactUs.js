@@ -9,7 +9,7 @@ const contact = {
     state: "MI",
     zipcode: "48009",
   },
-  phone: "(248)730-7000",
+  phone: "(248)238-8262",
   email: "admin@synergylit.com",
 };
 
