@@ -39,13 +39,18 @@ const ServiceForm = () => {
   const form = useRef(); // Create a ref for the form
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked, files } = e.target;
     if (type === "checkbox") {
       setFormData((prevState) => ({
         ...prevState,
         services: checked
           ? [...prevState.services, value]
           : prevState.services.filter((service) => service !== value),
+      }));
+    } else if (type === "file") {
+      setFormData((prevState) => ({
+        ...prevState,
+        attachment: files[0],
       }));
     } else {
       setFormData((prevState) => ({
@@ -78,7 +83,15 @@ const ServiceForm = () => {
           process.env.REACT_APP_EMAILJS_SERVICE_ID,
           process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
           form.current,
-          process.env.REACT_APP_EMAILJS_USER_ID
+          process.env.REACT_APP_EMAILJS_USER_ID,
+          {
+            attachments: [
+              {
+                name: formData.attachment.name,
+                file: formData.attachment,
+              },
+            ],
+          }
         )
         .then(
           (result) => {
@@ -125,7 +138,7 @@ const ServiceForm = () => {
           <p className="mb-1">Select all that apply:</p>
           <Row className="mb-2">
             {serviceReq.map((service, idx) => (
-              <Col sm={12} lg={6}>
+              <Col sm={12} lg={6} key={idx}>
                 <Form.Check
                   key={idx}
                   type="checkbox"
@@ -152,6 +165,10 @@ const ServiceForm = () => {
           <Form.Control.Feedback type="invalid">
             {errors.dateOfService}
           </Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Attach File (max ~ 500Kb)</Form.Label>
+          <Form.Control type="file" name="attachment" onChange={handleChange} />
         </Form.Group>
 
         <Row>
