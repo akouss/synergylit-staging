@@ -34,11 +34,11 @@ const services = [
     title: "Deposition Management",
     description: `Simplify and streamline your deposition management with Synergy Litigation Services. We offer the technology, international reach, and experienced case managers you need to excel in today’s competitive litigation landscape. Reduce stress, cut costs, and enhance your case management efficiency with our expert team by your side.`,
   },
-  {
-    id: "4",
-    title: "Intelligent Deposition Summaries",
-    description: `Our patent-pending artificial intelligence technology at Synergy Litigation Services revolutionizes deposition summaries. It automates page/line summaries with pinpoint accuracy and intelligently extracts key admissions based on the complaint’s facts. What sets our Intelligent Summary+ apart is the Deposition Memo, which organizes summaries thematically around crucial legal and factual issues. Gain quick insights and start building your winning strategy from the get-go. Plus, we offer same-day turnaround if transcripts are received during business hours, even if they weren’t produced by us. For more information, contact us at admin@synergylit.com.`,
-  },
+  // {
+  //   id: "4",
+  //   title: "Intelligent Deposition Summaries",
+  //   description: `Our patent-pending artificial intelligence technology at Synergy Litigation Services revolutionizes deposition summaries. It automates page/line summaries with pinpoint accuracy and intelligently extracts key admissions based on the complaint’s facts. What sets our Intelligent Summary+ apart is the Deposition Memo, which organizes summaries thematically around crucial legal and factual issues. Gain quick insights and start building your winning strategy from the get-go. Plus, we offer same-day turnaround if transcripts are received during business hours, even if they weren’t produced by us. For more information, contact us at admin@synergylit.com.`,
+  // },
   {
     id: "5",
     title: "Secure Audio and Video Transcription",

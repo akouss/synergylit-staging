@@ -24,7 +24,7 @@ const info = [
   },
   {
     image: img3,
-    title: "Intelligent Deposition Summaries",
+    title: "Deposition Management",
     description: "Revolutionizing Legal Insights",
   },
 ];
