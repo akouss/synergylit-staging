@@ -27,6 +27,7 @@ const initialFormData = {
   name: "",
   email: "",
   phone: "",
+  attachment: null,
 };
 
 const ServiceForm = () => {

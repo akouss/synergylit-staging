@@ -25,7 +25,7 @@ const CustomToast = ({ showToast, setShowToast, toastMessage, toastType }) => {
         <Toast.Header>
           <img
             src={logo}
-            className="rounded me-2 "
+            className="rounded me-2"
             alt=""
             style={{ maxHeight: "30px" }}
           />
