@@ -1,4 +1,5 @@
 import React from "react";
+import ContactForm from "./ContactForm";
 import "./style.css";
 
 // * Data
@@ -13,24 +14,24 @@ const contact = {
   email: "admin@synergylit.com",
 };
 
-const { address, phone, fax, email } = contact;
+const { address, phone, email } = contact;
 
 const ContactUs = () => {
   return (
-    <div className="contact-container">
-      <div className="overlay"></div>
-      <div className="contact-content">
-        <p>Office:</p>
-        <p>
-          {`${address.street},`}
-          <br /> {`${address.city}, ${address.state} ${address.zipcode}`}
-        </p>
-        <p>Phone:</p>
-        <p>{phone}</p>
-        <p>Email:</p>
-        <p>{email}</p>
+    <>
+      <div className="contact-container">
+        <div className="overlay"></div>
+        <div className="contact-content">
+          <ContactForm />
+          <p>
+            Office: {`${address.street},`}
+            <br /> {`${address.city}, ${address.state} ${address.zipcode}`}
+          </p>
+          <p>Phone: {`${phone}`}</p>
+          <p>Email: {`${email}`}</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
