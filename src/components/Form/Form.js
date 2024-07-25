@@ -105,7 +105,7 @@ const ServiceForm = () => {
           },
           (error) => {
             console.log("Failed to send email.", error.text);
-            handleShowToast("Failed to send email. Please try again.", "dark");
+            handleShowToast(error.text, "dark");
             // Optionally handle sending errors here
           }
         );
