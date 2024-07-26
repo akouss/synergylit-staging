@@ -120,11 +120,12 @@ const ServiceForm = () => {
     if (!formData.phone) errs.phone = "Phone is required";
     if (!formData.dateOfService)
       errs.dateOfService = "Date of service is required";
-    if (!formData.startTime) errs.startTime = "Start time is required";
-    if (!formData.endTime) errs.endTime = "End time is required";
-    if (!formData.deponent) errs.deponent = "Deponent is required";
-    if (!formData.location) errs.location = "Location is required";
-    if (!formData.caseName) errs.caseName = "Case name is required";
+    // if (!formData.startTime) errs.startTime = "Start time is required";
+    // if (!formData.endTime) errs.endTime = "End time is required";
+    // if (!formData.deponent) errs.deponent = "Deponent is required";
+    // if (!formData.location) errs.location = "Location is required";
+    // if (!formData.caseName) errs.caseName = "Case name is required";
+    if (!formData.attachment) errs.attachment = "File is required";
     return errs;
   };
 
@@ -168,14 +169,22 @@ const ServiceForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Attach File (max ~ 500Kb)</Form.Label>
-          <Form.Control type="file" name="attachment" onChange={handleChange} />
+          <Form.Label>Attach File (max ~ 500Kb)*</Form.Label>
+          <Form.Control
+            type="file"
+            name="attachment"
+            onChange={handleChange}
+            isInvalid={!!errors.attachment}
+          />
+          <Form.Control.Feedback type="invalid">
+            {errors.attachment}
+          </Form.Control.Feedback>
         </Form.Group>
 
         <Row>
           <Col>
             <Form.Group>
-              <p className="mb-1">Start Time*</p>
+              <p className="mb-1">Start Time</p>
               <Form.Control
                 type="time"
                 name="startTime"
@@ -189,7 +198,7 @@ const ServiceForm = () => {
           </Col>
           <Col>
             <Form.Group>
-              <p className="mb-1">End Time*</p>
+              <p className="mb-1">End Time</p>
               <Form.Control
                 type="time"
                 name="endTime"
@@ -206,7 +215,7 @@ const ServiceForm = () => {
         {/* Deponent and Location Section */}
         <Form.Group>
           <Form.Control
-            placeholder="Deponent*"
+            placeholder="Deponent"
             type="text"
             name="deponent"
             onChange={handleChange}
@@ -219,7 +228,7 @@ const ServiceForm = () => {
 
         <Form.Group>
           <Form.Control
-            placeholder="Location*"
+            placeholder="Location"
             type="text"
             name="location"
             onChange={handleChange}
@@ -232,7 +241,7 @@ const ServiceForm = () => {
 
         <Form.Group>
           <Form.Control
-            placeholder="Case Name*"
+            placeholder="Case Name"
             type="text"
             name="caseName"
             onChange={handleChange}
