@@ -33,6 +33,7 @@
   /* color: var(--bs-primary); */
   color: var(--bs-white);
   text-transform: uppercase; /* Capitalize all letters */
+  font-weight: 500;
 }
 
 .navBar .mysls {
