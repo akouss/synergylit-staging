@@ -36,15 +36,23 @@ function NavBar() {
       sticky="top"
     >
       <Navbar.Brand href="#" className="brand">
-        <img src={logo} alt="Synergy Litigation Services logo" />
-        <div className="brand-text">
-          Synergy
-          <br />
-          Litigation
-          <br />
-          Services
+        <div className="brand-container">
+          <img
+            src={logo}
+            alt="Synergy Litigation Services logo"
+            className="brand-logo"
+          />
+          <div className="vertical-line"></div>
+          <div className="brand-text">
+            Synergy
+            <br />
+            Litigation
+            <br />
+            Services
+          </div>
         </div>
       </Navbar.Brand>
+
       <Navbar.Toggle aria-controls="navbar-content" />
       <Navbar.Collapse id="navbar-content">
         <Nav className="ml-auto">
