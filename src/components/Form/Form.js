@@ -11,9 +11,10 @@ import "./style.css";
 // * Data
 const serviceReq = [
   "Court Reporter",
+  "Virtual",
   "Videographer",
+  "In-person",
   "Interpreter",
-  "Videoconference",
 ];
 
 const initialFormData = {

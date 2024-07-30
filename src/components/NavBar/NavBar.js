@@ -67,7 +67,7 @@ function NavBar() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Access MySLS Client Portal
+            Access My SLS Client Portal
           </Button>
         </Nav>
       </Navbar.Collapse>

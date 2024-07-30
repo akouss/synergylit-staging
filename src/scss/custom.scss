@@ -1,11 +1,12 @@
 $theme-colors: (
   "light": #f5fafb,
   "primary": #51b0e3,
-  "secondary": #172749 //#6B8B4C //#4C8B8B,,,,,,,,,,,,,,,,
+  "secondary": #172749,
 );
 
 // $border-radius-lg: 25rem;
 // $font-family-sans-serif: "trajan";
 $font-family-sans-serif: "Proxima Nova", sans-serif;
+// $font-family-sans-serif: "Metropolis", sans-serif;
 
 @import "~bootstrap/scss/bootstrap";

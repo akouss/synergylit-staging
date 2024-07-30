@@ -32,9 +32,7 @@ const CustomToast = ({ showToast, setShowToast, toastMessage, toastType }) => {
           <strong className="me-auto">Synergy Litigation Services</strong>
           <small>Now</small>
         </Toast.Header>
-        <Toast.Body className={toastType === "Dark" && "text-white"}>
-          {toastMessage}
-        </Toast.Body>
+        <Toast.Body>{toastMessage}</Toast.Body>
       </Toast>
     </ToastContainer>
   );
