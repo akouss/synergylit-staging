@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav, Button, Container } from "react-bootstrap";
 
 // * Style
 import "./style.css";
@@ -35,42 +35,45 @@ function NavBar() {
       expand="md"
       sticky="top"
     >
-      <Navbar.Brand href="#" className="brand">
-        <div className="brand-container">
-          <img
-            src={logo}
-            alt="Synergy Litigation Services logo"
-            className="brand-logo"
-          />
-          <div className="vertical-line"></div>
-          <div className="brand-text">
-            Synergy
-            <br />
-            Litigation
-            <br />
-            Services
+      <Container>
+        <Navbar.Brand href="#" className="brand">
+          <div className="brand-container">
+            <img
+              src={logo}
+              alt="Synergy Litigation Services logo"
+              className="brand-logo"
+            />
+            <div className="vertical-line"></div>
+            <div className="brand-text">
+              Synergy
+              <br />
+              Litigation
+              <br />
+              Services
+            </div>
           </div>
-        </div>
-      </Navbar.Brand>
+        </Navbar.Brand>
 
-      <Navbar.Toggle aria-controls="navbar-content" />
-      <Navbar.Collapse id="navbar-content">
-        <Nav className="ml-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#services">Services</Nav.Link>
-          <Nav.Link href="#schedule">Schedule</Nav.Link>
-          <Nav.Link href="#contact">Contact Us</Nav.Link>
+        <Navbar.Toggle aria-controls="navbar-content" />
+        <Navbar.Collapse id="navbar-content">
+          <Nav className="mx-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#services">Services</Nav.Link>
+            <Nav.Link href="#schedule">Schedule</Nav.Link>
+            <Nav.Link href="#contact">Contact Us</Nav.Link>
+          </Nav>
           <Button
             variant="primary"
             as="a"
             href="https://synergylit.reporterbase.com/contact"
             target="_blank"
             rel="noreferrer noopener"
+            className="mysls"
           >
             Access My SLS Client Portal
           </Button>
-        </Nav>
-      </Navbar.Collapse>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }

@@ -21,6 +21,8 @@
 .navBar .brand {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navBar .brand img {
@@ -37,11 +39,21 @@
 }
 
 .navBar .mysls {
-  border: 1px dashed var(--bs-primary);
-  border-radius: 24px;
-  color: var(--bs-primary);
+  /* border: 1px dashed var(--bs-primary); */
+  /* border-radius: 24px; */
+  /* color: var(--bs-primary); */
   padding: 8px 16px;
   text-decoration: none;
+}
+
+/* Center the nav items */
+.navBar .navbar-nav {
+  justify-content: center;
+}
+
+/* Optional: Adjust the spacing of the nav links */
+.navBar .navbar-nav .nav-link {
+  margin: 0 5px;
 }
 
 .brand-container {
@@ -73,6 +85,10 @@
 @media (max-width: 992px) {
   .navBar .brand img {
     height: 8rem; /* Adjust for medium screens */
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
   }
 }
 
