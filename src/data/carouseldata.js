@@ -13,6 +13,11 @@ import img3 from "../assets/img3-o.jpg";
 
 const info = [
   {
+    image: img3,
+    title: "Deposition Management",
+    description: "Revolutionizing Legal Insights",
+  },
+  {
     image: img1,
     title: "Stenographic Court Reporting",
     description: "Precision and Speed at Your Fingertips",
@@ -21,11 +26,6 @@ const info = [
     image: img2,
     title: "Expert Realtime Transcription",
     description: "Instant Access to Testimonies",
-  },
-  {
-    image: img3,
-    title: "Deposition Management",
-    description: "Revolutionizing Legal Insights",
   },
 ];
 

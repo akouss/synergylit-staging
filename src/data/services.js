@@ -1,4 +1,16 @@
 // * Data
+
+const contact = {
+  address: {
+    street: "325 S. Old Woodward Suite 200",
+    city: "Birmingham",
+    state: "MI",
+    zipcode: "48009",
+  },
+  phone: "(248)238-8262",
+  email: "admin@synergylit.com",
+};
+
 const heading = "Professional Court Reporting Services";
 
 const highlights = [
@@ -11,7 +23,7 @@ const highlights = [
     icon: "bi-lightbulb",
   },
   {
-    desc: "Flexible deposition schedule that works the way you need it to work.",
+    desc: "Flexible deposition scheduling to fit your needs",
     icon: "bi-calendar-check",
   },
 ];
@@ -51,4 +63,4 @@ const services = [
   },
 ];
 
-export { heading, services, highlights };
+export { heading, services, highlights, contact };
