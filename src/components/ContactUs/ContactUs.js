@@ -3,16 +3,7 @@ import ContactForm from "./ContactForm";
 import "./style.css";
 
 // * Data
-const contact = {
-  address: {
-    street: "325 S. Old Woodward Suite 200",
-    city: "Birmingham",
-    state: "MI",
-    zipcode: "48009",
-  },
-  phone: "(248)238-8262",
-  email: "admin@synergylit.com",
-};
+import { contact } from "../../data/services";
 
 const { address, phone, email } = contact;
 
