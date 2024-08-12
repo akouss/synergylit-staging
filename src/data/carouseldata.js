@@ -1,9 +1,10 @@
 // * Images
 import img1 from "../assets/img1-o.jpg";
-import img2 from "../assets/img2-o.jpg";
+// import img2 from "../assets/img2-o.jpg";
 import img3 from "../assets/img3-o.jpg";
 // import img4 from "../assets/img4-o.jpg";
 // import img5 from "../assets/img5-o.jpg";
+import img6 from "../assets/img6-o.jpg";
 
 // import img1 from "../assets/raw/img1.jpeg";
 // import img2 from "../assets/raw/img2.jpeg";
@@ -23,7 +24,7 @@ const info = [
     description: "Precision and Speed at Your Fingertips",
   },
   {
-    image: img2,
+    image: img6,
     title: "Expert Realtime Transcription",
     description: "Instant Access to Testimonies",
   },

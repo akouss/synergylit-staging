@@ -61,6 +61,7 @@ function NavBar() {
             <Nav.Link href="#services">Services</Nav.Link>
             <Nav.Link href="#schedule">Schedule</Nav.Link>
             <Nav.Link href="#contact">Contact Us</Nav.Link>
+            <Nav.Link href="#contact">About Us</Nav.Link>
           </Nav>
           <Button
             variant="primary"
