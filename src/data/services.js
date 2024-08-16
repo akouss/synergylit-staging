@@ -15,11 +15,11 @@ const heading = "Professional Court Reporting Services";
 
 const highlights = [
   {
-    desc: " Offering a complete array of electronic and stenographic court reporting services.",
+    desc: " Offering a complete array of electronic and stenographic court reporting services",
     icon: "bi-laptop",
   },
   {
-    desc: "Our experienced staff is trained to handle any court reporting challenge.",
+    desc: "Our experienced staff is trained to handle any court reporting challenge",
     icon: "bi-lightbulb",
   },
   {
