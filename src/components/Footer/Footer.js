@@ -17,6 +17,16 @@ function Footer() {
             Copyright {new Date().getFullYear()} &copy; All rights reserved
           </p>
         </Col>
+        <Col md={4} className="container order-3">
+          <a
+            href="https://drive.google.com/file/d/1tRZIwSPvxCg_AWRq389Bz8pMWk2QwDak/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="social"
+          >
+            <p className="text">Terms & Conditions</p>
+          </a>
+        </Col>
         <Col md={4} className="container order-2">
           <p className="brand">SYNERGY LITIGATION SERVICES</p>
         </Col>
