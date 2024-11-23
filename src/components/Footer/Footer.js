@@ -19,7 +19,7 @@ function Footer() {
         </Col>
         <Col md={4} className="container order-3">
           <a
-            href="https://drive.google.com/file/d/1tRZIwSPvxCg_AWRq389Bz8pMWk2QwDak/view?usp=sharing"
+            href="https://drive.google.com/file/d/1fIKNU7biVNSx7hBPjknUi2djMrBiH1yC/view"
             target="_blank"
             rel="noreferrer noopener"
             className="social"
