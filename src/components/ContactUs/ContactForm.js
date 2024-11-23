@@ -141,6 +141,10 @@ const ContactForm = () => {
         <Button variant="primary" type="submit">
           Send Message
         </Button>
+      {/* Disclosure Text */}
+      <div style={{ fontSize: "0.8rem", marginTop: "0.5rem", color: "#6c757d" }}>
+        By providing a telephone number and submitting this form, you consent to be contacted by SMS text message. Message & data rates may apply. You can reply STOP to opt-out of further messaging.
+      </div>
       </Form>
       <Toast
         showToast={showToast}
