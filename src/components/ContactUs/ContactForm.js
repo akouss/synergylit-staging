@@ -125,6 +125,20 @@ const ContactForm = () => {
         </Form.Group>
 
         <Form.Group>
+          <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              isInvalid={!!errors.phone}
+            />
+          <Form.Control.Feedback type="invalid">
+            {errors.phone}
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
           <Form.Label>Message</Form.Label>
           <Form.Control
             as="textarea"
