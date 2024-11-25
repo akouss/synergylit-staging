@@ -32,7 +32,7 @@ function Footer() {
         </Col>
         <Col md={4} className="social-container order-1">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/profile.php?id=61566427298319"
             target="_blank"
             rel="noreferrer noopener"
             className="social"
@@ -40,7 +40,7 @@ function Footer() {
             <img src={facebook} alt="facebook" />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/synergy-litigation-services/"
             target="_blank"
             rel="noreferrer noopener"
             className="social"
@@ -48,7 +48,7 @@ function Footer() {
             <img src={linkedin} alt="linkedin" />
           </a>
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/synergylitigationservices/"
             target="_blank"
             rel="noreferrer noopener"
             className="social"
