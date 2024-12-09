@@ -69,6 +69,7 @@ const ContactForm = () => {
     let errs = {};
     if (!formData.firstName) errs.firstName = "First name is required";
     if (!formData.lastName) errs.lastName = "Last name is required";
+    if (!formData.phone) errs.phone = "Phone Number is required";
     if (!formData.email) errs.email = "Email is required";
     if (!formData.message) errs.message = "Message is required";
     return errs;
