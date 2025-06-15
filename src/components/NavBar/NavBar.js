@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
+import DarkModeToggle from "../DarkModeToggle";
 
 // * Style
 import "./style.css";
@@ -63,16 +64,19 @@ function NavBar() {
             <Nav.Link href="#contact">Contact Us</Nav.Link>
             <Nav.Link href="#contact">About Us</Nav.Link>
           </Nav>
-          <Button
-            variant="primary"
-            as="a"
-            href="https://synergylit.reporterbase.com/contact"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="mysls"
-          >
-            Access My SLS Client Portal
-          </Button>
+          <div className="d-flex align-items-center">
+            <Button
+              variant="primary"
+              as="a"
+              href="https://synergylit.reporterbase.com/contact"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mysls"
+            >
+              Access My SLS Client Portal
+            </Button>
+            <DarkModeToggle />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

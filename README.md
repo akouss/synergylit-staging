@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Synergy Litigation Services Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a marketing site built with React and Bootstrap. It now includes a built in dark mode that can be toggled using the moon icon in the navigation bar.
+
+## Getting Started
+
+Run `npm start` to launch the development server. Use `npm run build` to create a production build.
 
 ## Available Scripts
 
