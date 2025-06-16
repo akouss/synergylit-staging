@@ -3,6 +3,7 @@ import Carousel from "./components/Carousel";
 import Services from "./components/ServiceDesc";
 import Information from "./components/Information";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
       <Services />
       <Information />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
